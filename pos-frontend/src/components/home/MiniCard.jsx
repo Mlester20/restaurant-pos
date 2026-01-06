@@ -6,7 +6,9 @@ const MiniCard = ({ title, icon, number, footerNum }) => {
             <button className={`${title === "Total Earnings" ? "text-green-500" : "text-blue-500"} p-3 rounded-lg text-[#f5f5f5] text-2xl`}> {icon} </button>
         </div>
         <div>
-            <h1 className="text-white text-4xl font-semibold mt-5"> {number} </h1>
+            <h1 className="text-white text-4xl font-semibold mt-5">
+              { title === "Total Earnings" ? `₱${number}` : number }
+            </h1>
             <h1 className="text-white text-lg mt-2"><span className="text-[#02ca3a]">{footerNum}% </span> than yesterday </h1>
         </div>
     </div>
